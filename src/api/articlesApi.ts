@@ -23,9 +23,8 @@ export const ArticlesApi = {
         for (let i = 0; i < articlesHtmlCollection.length; i++) {
             articles.push({
                 title: articlesHtmlCollection[i].getElementsByTagName('title')[0].innerHTML,
-                text: articlesHtmlCollection[i].children[4].textContent!.replace('/<h1>(.*)<\/h2>/', '')
+                text: articlesHtmlCollection[i].children[4].textContent!
             })
-            console.log(articlesHtmlCollection[i].children[4].textContent)
         }
 
         console.log(articles)
